@@ -24,7 +24,6 @@ public class GuardarEnBD implements ConsumidorWeb {
 		try {
 			for (int i = 0; i < parts.length; i++) {
 				post = parts[i].replace("{", "");
-				System.out.println(post);
 				st = dbConn.prepareStatement("INSERT INTO post(post) VALUES (?)");
 				st.setString(1, post);
 				st.executeUpdate();
